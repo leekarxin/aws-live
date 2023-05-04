@@ -58,6 +58,11 @@ def AddEmp():
 
     return render_template("success.html", sname=sname, sitem=sitem, rname=rname, raddress=raddress)
 
+@app.route("/submitBooking", methods=['POST'])
+def submitBooking():
+    print("booking function called")
+    print(request.form)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
