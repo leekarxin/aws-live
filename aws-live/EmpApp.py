@@ -40,7 +40,7 @@ def addemp():
     rphone = request.form['rphone']
     raddress = request.form['raddress']
 
-    insert_sql = "INSERT INTO customer VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+    insert_sql = "INSERT INTO customer(%s, %s, %s, %s, %s, %s, %s, %s)"
     cursor = db_conn.cursor()
 
     try:
