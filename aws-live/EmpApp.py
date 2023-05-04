@@ -51,12 +51,12 @@ def AddEmp():
         cursor.execute(insert_sql, (sname, semail, sphone, saddress, sitem, rname, rphone, raddress))
         db_conn.commit()
 
-        except Exception as e:
+    except Exception as e:
         return "Error occurred with message: " + str(e)
     finally:
         cursor.close()
 
-    return render_template('success.html', sname=sname, sitem=sitem, rname=rname, raddress=raddress)
+    return render_template("success.html", sname=sname, sitem=sitem, rname=rname, raddress=raddress)
 
 
 if __name__ == '__main__':
