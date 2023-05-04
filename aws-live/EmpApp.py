@@ -29,7 +29,7 @@ def about():
 
 
 @app.route("/addemp", methods=['POST'])
-def AddEmp():
+def addemp():
     sname = request.form['sname']
     semail = request.form['semail']
     sphone = request.form['sphone']
